@@ -1,6 +1,6 @@
 import express from 'express'
 import { persons } from '../utils/mockups'
-import { crearPersona } from '../components/agenda/controller'
+import { crearPersona, eliminarPersona, obtenerUnaPersona, obtenerPersonas } from '../components/agenda/controller'
 import validationHandler from '../utils/middlewares/validationHandler'
 import { createPersonSchema } from '../components/agenda/domain/add'
 
@@ -14,31 +14,11 @@ router.get('/', (_, response) => {
   response.send('<h1>AGENDA</h1>')
 })
 
-router.get('/api/persons', (request, response) => {
-  response.json(persons)
-})
+router.get('/api/persons', obtenerPersonas)
 
-router.get('/api/persons/:id', (request, response) => {
-  const id = parseInt(request.params.id)
-  console.log(persons)
-  const person = persons.find(person => person.id === id)
-  if (person) {
-    response.json(person)
-  } else {
-    response.status(404).json({ Error: 'No se encontró ninguna persona con este ID en la agenda' })
-  }
-})
+router.get('/api/persons/:id', obtenerUnaPersona)
 
-router.delete('/api/persons/:id', (request, response) => {
-  const id = Number(request.params.id)
-  const cantidadInicial = persons.length
-  persons = persons.filter(person => person.id !== id)
-  if (cantidadInicial !== persons.length) {
-    response.json({ Correcto: `Se eliminó a la persona con el ID ${id}` })
-  } else {
-    response.status(404).json({ Error: 'No se encontró ninguna persona con este ID en la agenda' })
-  }
-})
+router.delete('/api/persons/:id', eliminarPersona)
 
 router.get('/info', (request, response) => {
   const cantPersons = persons.length
