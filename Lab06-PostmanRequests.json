@@ -1,0 +1,484 @@
+{
+	"info": {
+		"_postman_id": "0fbbe424-4596-4eab-99cd-056c9e73e4ba",
+		"name": "DAWA-Laboratorio 06 gaaaa",
+		"description": "Laboratorio 06 - Javier Fernando Flores Cárdenas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Punto 1: Listar personas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/persons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"persons"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Punto 1: Listar personas",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/persons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"persons"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "222"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"de-rIB4F9cubbdlwscAI+ubA+ojbVM\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Apr 2021 06:09:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Arto Hellas\",\n        \"number\": \"040-123456\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Ada Lovelace\",\n        \"number\": \"39-44-5323523\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Dan Abramov\",\n        \"number\": \"12-43-234345\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Mary Poppendick\",\n        \"number\": \"39-23-6423122\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Punto 2: Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"info"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Punto 2: Info",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/info",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"info"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "127"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7f-2x6rJU9nxK58ZjEEaBlyMD6JkUk\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Apr 2021 06:10:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "        \n<p>Phonebook has info for 4 people</p>\n<p>Wed Apr 21 2021 01:10:59 GMT-0500 (hora estándar de Perú)</p>"
+				}
+			]
+		},
+		{
+			"name": "Punto 3: Get one - 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/persons/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"persons",
+						"4"
+					]
+				},
+				"description": "ID correcto"
+			},
+			"response": [
+				{
+					"name": "Punto 3: Get one - 1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/persons/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"persons",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3a-BdMeruvhO9GIeXIcHoqxUoEGmgw\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Apr 2021 06:11:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"name\": \"Mary Poppendick\",\n    \"number\": \"39-23-6423122\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Punto 3: Get one - 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/persons/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"persons",
+						"7"
+					]
+				},
+				"description": "ID incorrecto"
+			},
+			"response": [
+				{
+					"name": "Punto 3: Get one - 2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/persons/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"persons",
+								"7"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "68"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"44-GcHF3cnIYf/sPuIPAdrNe/jHhKk\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Apr 2021 06:11:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Error\": \"No se encontró ninguna persona con este ID en la agenda\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Punto 4: Delete one",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/persons/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"persons",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Punto 4: Delete one",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/persons/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"persons",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"33-dxzZmsZJqOkIFzH67hMnMfnViBk\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Apr 2021 06:11:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Correcto\": \"Se eliminó a la persona con el ID 4\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Punto 5: Insert POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Javier Flores\",\r\n    \"number\": \"957786155\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/persons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"persons"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Punto 5: Insert POST",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Javier Flores\",\r\n    \"number\": \"957786155\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/persons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"persons"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"34-hffu7TlBuBIhZ35QTveN01rIt0Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Apr 2021 06:12:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Correcto\": \"Se agregó correctamente a la presona\"\n}"
+				}
+			]
+		}
+	]
+}
